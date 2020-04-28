@@ -2,11 +2,13 @@
 @import 'shared/fonts.css';
 @import 'shared/header.css';
 @import 'shared/buttons.css';
+@import 'shared/form.css';
+
 
 
 :root {
   font-family: 'Flamante Round Book';
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: var(--color-text-light);
 }
 
