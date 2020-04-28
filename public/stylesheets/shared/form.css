@@ -43,7 +43,7 @@
   color: var(--color-text-light);
   font-size: 1rem;
   font-weight: normal;
-  font-family:  'Flamante Round Book';
+  font-family: 'Gotham Rounded';
   outline: none;
 }
 
@@ -65,7 +65,7 @@
 }
 
 .filepond--root {
-  font-family: 'Flamante Round Book';
+  font-family: 'Gotham Rounded';
   margin-bottom: 0;
 }
 
