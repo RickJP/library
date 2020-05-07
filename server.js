@@ -25,7 +25,16 @@ app.use('/', indexRouter);
 app.use('/authors', authorsRouter);
 app.use('/books', booksRouter);
 
-mongoose.connect(process.env.DATABASE_URL, {
+const env = process.env;
+const user = env.REACT_APP_DB_USER
+const pw = env.REACT_APP_DB_PW
+const server = env.REACT_APP_DB_SERVER
+const db_name = env.REACT_APP_DB_NAME
+const auth = env.REACT_APP_DB_AUTH
+
+const DB_URL = `mongodb://${user}:${pw}@${server}/${db_name}?authSource=${auth}`
+
+mongoose.connect(DB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true 
 })
@@ -34,5 +43,5 @@ const db = mongoose.connection;
 db.on('error', error => console.error(error));
 db.once('open', () => console.log('Connected to Mongoose'));
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 4000);
 

@@ -27,6 +27,8 @@ router.get('/new', (req, res) => {
 router.post('/', async (req, res) => {
   const author = new Author({
     name: req.body.name,
+    country: req.body.country,
+    genre: req.body.genre
   });
 
   try {
@@ -45,8 +47,11 @@ router.get('/:id', async (req, res) => {
   try {
     const author = await Author.findById(req.params.id)
     const books = await Book.find({ author: author.id }).limit(6).exec()
+    console.log(author);
     res.render('authors/show', {
-      author: author,
+      author,
+      country: author.country,
+      genre: author.genre,
       booksByAuthor: books
     })
   } catch {
@@ -57,11 +62,18 @@ router.get('/:id', async (req, res) => {
 router.get('/:id/edit', async (req, res) => {
   try {
     const author = await Author.findById(req.params.id);
-    res.render('authors/edit', {author: author});
+    console.log(author)
+    res.render('authors/edit', {
+      author: author,
+      country: author.country,
+      genre: author.country
+    });
   } catch (err) {
     res.redirect('/authors');
   }
 });
+
+
 
 router.put('/:id', async (req, res) => {
   let author;

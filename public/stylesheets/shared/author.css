@@ -1,9 +1,42 @@
-.author-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
+.author-container {
+  left: -5rem;
 }
 
 .author-name {
-  font-size: 1.5rem;
+  position: relative;
+  left: -5rem;
+  top: .5rem;
 }
+
+.author-row {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem;
+}
+
+.search-authors-btn-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-authors-btn {
+  margin-left: 1rem;
+}
+
+.author-name {
+  font-size: 1rem;
+}
+
+.author-label {
+  margin: 1rem;
+}
+
+.edit-author-btn-row {
+  margin-top: 1.5rem;
+}
+
+/* .edit-author-btn-row .btn {
+  margin: 1rem;
+} */
+
+

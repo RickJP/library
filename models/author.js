@@ -6,6 +6,18 @@ const authorSchema = new Schema({
     name: {
       type: String,
       required: true
+    },
+    country: {
+      type: String,
+    },
+    genre: {
+      type: String,
+    },
+    bio: {
+      type: {
+        brief: String,
+        full: String
+      }
     }
 });
 

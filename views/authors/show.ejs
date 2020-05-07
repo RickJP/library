@@ -1,4 +1,6 @@
 <h2 class="page-header"><%= author.name %></h2>
+<h4 class=""><%= author.country %></h4>
+<h4 class=""><%= author.genre %></h4>
 <div class="btn-row">
   <a class="btn btn-primary" href="/authors/<%= author.id %>/edit">Edit</a>
 <%- include('../partials/deleteForm',
